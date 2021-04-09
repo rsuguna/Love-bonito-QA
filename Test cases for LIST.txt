@@ -1,0 +1,81 @@
+Feature: To add the list in trello
+
+Scenario: Verify the text box place holder visible or  not.
+  Given User is already logged in and created a board
+  Given User is Clicked on Add another List 
+  When Enter the name of the list in the Title field 
+  Then The place holder is on the Text field to enter the name of the list
+  
+Scenario: Check the text box is blank or not by default
+  Given User is already logged in and created a board
+  When User is Clicked on Add another List 
+  Then The test  box is empty by default
+  
+Scenario: Check the height and alignment of text boxes are same throughout the site.
+  Given User is already logged in and created a board
+  When User is Clicked on Add multiple List 
+  Then The text box height and alignement should be same
+
+Scenario: Check for the alpha characters or alpha numeric characters
+  Given User is already logged in and created a board
+  Given User is Clicked on Add another List 
+  When Enter Alpha characters/Alpha numeric in the text field
+  Then Entered Text should be visible on the title name.
+  
+Scenario: Check for alphabet is accepted in upper and lower case both.
+  Given User is already logged in and created a board
+  Given User is Clicked on Add another List 
+  When Enter Alphabets with combination Upper and lower case
+  Then Entered Text should be visible on the title name.
+  
+Scenario: Check if the hyper link or website url is accepted.
+  Given User is already logged in and created a board
+  Given User is Clicked on Add another List 
+  When Enter Webiste url or any hyperlink 
+  Then Entered Text should be visible as normal text even if link is entered
+  
+Scenario: Check if the hyper link or website url is accepted.
+  Given User is already logged in and created a board
+  Given User is Clicked on Add another List 
+  When Enter Webiste url or any hyperlink 
+  Then Entered Text should be visible as normal text even if link is entered
+  
+Scenario: Check Maximum character limit of text box
+  Given User is already logged in and click on Add another List
+  When Enter the paragraph or long sentence. 
+  Then More than the maximum limit no text should be entered
+
+Scenario: Check Minimum character limit of text box
+  Given User is already logged in and click on Add another List
+  When Click on Add List without entering text
+  Then List will not be added without entering Text 
+  
+Scenario: Check for numeric characters, symbols or special characters only
+  Given User is already logged in and click on Add another List
+  When Enter the Title name as Sybmob/special characters/numeric characters. 
+  Then The Title name should be added if Sybmob/special characters/numeric characters is entered
+  
+Scenario: Check by entering ”HTML tag” and click add button
+  Given User is already logged in 
+  Given click on Add another List
+  When Enter the Title name as HTML tag. 
+  Then The Title name should be added as text if HTML tag is entered
+  
+Scenario: Check Copy and Paste texts from word or notepad
+  Given User is already logged in and click on Add another List
+  When Copy and paste text from word or note pad  
+  Then The Title name should be added as text as copied 
+  
+Scenario: Check if the List is closed without saving the list title
+  Given User is already logged in and click on Add another List
+  When Enter the tite name 
+  And Click on close button
+  Then The Title name is removed
+  
+
+  
+
+  
+  
+
+   
